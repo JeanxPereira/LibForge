@@ -105,4 +105,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: MSIX Package
-        path: D:\a\LibForge
+        path: D:\a\LibForge\LibForge\LibForge\
