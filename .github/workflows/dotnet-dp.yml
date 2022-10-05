@@ -82,6 +82,14 @@ jobs:
       run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
       env:
         Configuration: ${{ matrix.configuration }}
+        
+    # Add Depenencies SFML
+    - name: Add Depenencies
+      run: dotnet add package SFML.Net
+
+    # Add Depenencies OpenTK
+    - name: Add Depenencies
+      run: dotnet add package OpenTK
 
     # Create the app package by building and packaging the Windows Application Packaging project
     - name: Create the app package
